@@ -20,6 +20,7 @@ fun main(args: Array<String>) {
     whileWithList()
     doWhileExample()
     workingWithStrings()
+    workingWithTemplates()
 
 
 }
@@ -40,7 +41,7 @@ fun printValue(value : Int){
         in 3..5 -> "The value is between Three and Five"
         6, 7, 8 -> "The value is either six, seven or eight"
         else -> {
-            "The value is: " + value
+            "The value is: $value"
         }
     }
 }
@@ -89,7 +90,7 @@ fun describe(obj: Any) = when (obj) {
 fun forEachStandard(){
     val items = listOf("apple", "banana", "kiwi")
     for (item in items){
-        println("Item is: " + item)
+        println("Item is: $item")
     }
 }
 
@@ -145,4 +146,23 @@ fun workingWithStrings(){
           |  (Benjamin Franklin)
     """.trimMargin()
     println(franklin)
+}
+
+fun workingWithTemplates(){
+    val firstString = "This is a String"
+    val secondString = "and this is another String"
+
+    //using simple names
+    println ("Simple names: $firstString $secondString")
+
+    //using arbitrary expressions in {}
+    println("Expressions (cases): ${firstString.uppercase()} ${secondString.lowercase()}")
+    println("Expressions (string size): first string is ${firstString.length}")
+    println("Expressions (substring): ${firstString.substring(0,2)}")
+}
+
+fun nullSafety() {
+    var aString :String? = "abc"
+    val size = if (aString != null) aString.length  else -1
+    aString = null
 }
