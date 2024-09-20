@@ -57,7 +57,7 @@ fun printExpressionResult(numberValue: Int, stringValue: String){
     when (numberValue){
         parseInt(stringValue) -> "stringValue holds the same number as numberValue"
         else -> {
-           "StringValue is not the same number as numberValue"
+           "StringValue is not the same  number as numberValue"
         }
     }
 }
