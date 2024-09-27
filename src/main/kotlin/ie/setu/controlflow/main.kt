@@ -2,7 +2,7 @@ package ie.setu.controlflow
 
 import java.lang.Integer.parseInt
 
-fun main(args: Array<String>) {
+fun main() {
     println("The max number is: " + maxOf(4,6));
     printValue(7)
     printRange(30)
